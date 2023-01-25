@@ -1,0 +1,258 @@
+.knowledges {
+  .knowledgesContent {
+    min-height: $minHeight;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 20% 2fr 2fr;
+    grid-template-rows: 30% 30%;
+    grid-template-areas:
+      "a b c"
+      "d b c"
+      "e b c";
+
+
+    .experience,
+    .formations,
+    .languages,
+    .soft,
+    .hobbies {
+      // background: rgb(19, 132, 155);
+      background: $color-2;
+      border-radius: $borderRadius;
+      padding: .8rem;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-family: $font-2;
+      color: $color-5;
+      text-transform: uppercase;
+    }
+
+    .experience {
+      grid-area: b;
+      margin: 0 0 .5rem .5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "1"
+        "2"
+        "3";
+
+      h3 {
+        grid-area: 1;
+      }
+
+      h4 {
+        text-align: center;
+        font-size: 1.2rem;
+        color: $color-5;
+      }
+
+      h5 {
+        color: $color-3;
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0.5rem 0 0.5rem 1rem;
+      }
+
+      li {
+        text-align: justify;
+        padding: 0 1rem;
+      }
+
+      p {
+        text-align: justify;
+        padding: 0 1rem;
+      }
+
+      .exp-1 {
+        grid-area: 2;
+      }
+
+      .exp-2 {
+        grid-area: 3;
+      }
+    }
+
+    .formations {
+      grid-area: c;
+      margin: 0 0 .5rem .5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "1"
+        "2"
+        "3"
+        "4"
+        "5";
+
+      h3 {
+        grid-area: 1;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        text-align: center;
+        color: $color-5;
+      }
+
+      h5 {
+        color: $color-3;
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0.5rem 0 0.5rem 1rem;
+      }
+
+      p {
+        text-align: justify;
+        padding: 0 1rem;
+      }
+
+      .for-1 {
+        grid-area: 2;
+      }
+
+      .for-2 {
+        grid-area: 3;
+      }
+
+      .for-3 {
+        grid-area: 4;
+      }
+
+      .for-4 {
+        grid-area: 5;
+      }
+    }
+
+
+    .languages {
+      text-align: center;
+      grid-area: a;
+      margin: 0 0 .5rem .5rem;
+      // display: grid;
+      // grid-template-columns: 1fr;
+      // grid-template-rows: 10% 1fr 1fr;
+
+
+      ul {
+        height: 80%;
+        display: grid;
+
+        // li {
+        //   color: $color-5;
+        // }
+      }
+    }
+
+    .soft {
+      grid-area: e;
+      margin: 0 0 .5rem .5rem;
+      text-align: center;
+
+      ul {
+
+        height: 80%;
+        display: grid;
+
+
+      }
+    }
+
+
+    .hobbies {
+
+      grid-area: d;
+      text-align: center;
+
+      margin: 0 0 .5rem .5rem;
+      // display: grid;
+      // grid-template-columns: 1fr;
+      // grid-template-rows: 10% 1fr 1fr;
+
+
+      ul {
+        height: 100%;
+        display: grid;
+
+        // li {
+        //   color: $color-5;
+        // }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .knowledgesContent {
+    h3 {
+      font-size: 1.2rem !important;
+    }
+
+    .languages {
+      padding-top: .2rem !important;
+    }
+
+    p {
+      font-size: .8rem;
+    }
+
+    .formations,
+    .soft,
+    .hobbies {
+      font-size: .8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .knowledgesContent {
+    h4 {
+      font-size: .9rem !important;
+    }
+
+    h5 {
+      font-size: .6rem !important;
+      padding: .2rem 1rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .knowledgesContent {
+    display: grid !important;
+    grid-template-columns: fr !important;
+    grid-template-rows: 1fr 1fr 180px 180px !important;
+
+    .languages {
+      grid-area: 1 !important;
+    }
+
+    .experience {
+      grid-area: 2 !important;
+      margin-left: 0 !important;
+    }
+
+    .formations {
+      grid-area: 3 !important;
+      margin-right: 0 !important;
+    }
+
+    .hobbies {
+      grid-area: 4 !important;
+      margin-top: .5rem !important;
+    }
+
+    .soft {
+      grid-area: 5 !important;
+      margin-top: .5rem !important;
+    }
+  }
+}
